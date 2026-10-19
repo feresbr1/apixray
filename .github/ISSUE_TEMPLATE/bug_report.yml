@@ -1,0 +1,23 @@
+name: Bug report
+description: Wrong inference, an invalid spec, a recorder problem, or the web app misbehaving.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: '**Never attach a HAR with real cookies, tokens or personal data.** Reduce it to the few requests that show the problem and scrub values first.'
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, and what did you expect?
+      description: e.g. "/orders/A12 and /orders/B7 were not merged" or "operation name is odd".
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Scrubbed requests or command
+      render: text
+  - type: input
+    id: env
+    attributes:
+      label: OS, browser, Node.js version, apixray version (`apixray --version`)

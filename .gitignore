@@ -1,0 +1,12 @@
+node_modules/
+dist/web/
+playwright-report/
+test-results/
+.vite/
+*.log
+.DS_Store
+.env
+.env.*
+*.har
+!examples/**/*.har
+!test/fixtures/*.har

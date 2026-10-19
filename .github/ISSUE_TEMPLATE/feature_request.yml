@@ -1,0 +1,14 @@
+name: Feature idea
+description: A new output, an inference improvement, or support for another capture format.
+labels: [enhancement]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would you like apixray to do?
+    validations:
+      required: true
+  - type: textarea
+    id: example
+    attributes:
+      label: A real (scrubbed) example where it would help

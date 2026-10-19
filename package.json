@@ -1,0 +1,72 @@
+{
+  "name": "apixray",
+  "version": "1.0.0",
+  "description": "X-ray any web app's API: use the app (or drop a HAR file) and get an OpenAPI 3.1 spec, a typed TypeScript client and curl commands, inferred from real traffic. Local-first, secrets redacted.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Feres Ben Brahim",
+  "homepage": "https://feresbr1.github.io/apixray/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/feresbr1/apixray.git"
+  },
+  "bugs": {
+    "url": "https://github.com/feresbr1/apixray/issues"
+  },
+  "keywords": [
+    "openapi",
+    "reverse-engineering",
+    "har",
+    "api",
+    "swagger",
+    "openapi-generator",
+    "typescript-client",
+    "devtools",
+    "chrome-devtools-protocol"
+  ],
+  "bin": {
+    "apixray": "dist/cli/apixray.mjs"
+  },
+  "files": [
+    "dist/cli/apixray.mjs",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run build:web && npm run build:cli",
+    "build:web": "vite build",
+    "build:cli": "node scripts/build-cli.mjs",
+    "preview": "vite preview --port 4178 --strictPort",
+    "deploy": "node scripts/deploy-pages.mjs",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "check": "npm run format:check && npm run lint && npm run typecheck && npm run test && npm run build"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@fontsource/inter": "^5.3.0",
+    "@fontsource/jetbrains-mono": "^5.3.0",
+    "@playwright/test": "^1.64.1",
+    "@preact/preset-vite": "^2.10.6",
+    "@seriousme/openapi-schema-validator": "^2.11.0",
+    "@types/node": "^24.19.2",
+    "esbuild": "^0.28.2",
+    "eslint": "^10.13.0",
+    "globals": "^17.13.0",
+    "preact": "^11.0.1",
+    "prettier": "^3.9.10",
+    "typescript": "~6.0.3",
+    "typescript-eslint": "^8.71.2",
+    "vite": "^8.3.4",
+    "vitest": "^5.0.5",
+    "yaml": "^2.9.1"
+  }
+}

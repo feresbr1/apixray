@@ -1,0 +1,4 @@
+* text=auto eol=lf
+dist/cli/** linguist-generated=true
+*.gif binary
+*.png binary
